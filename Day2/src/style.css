@@ -1,18 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
 * {
+  margin: 0;
   padding: 0;
-  margin: 10;
   box-sizing: border-box;
 }
 
-
 body {
-  background-color: black;
+  background: #0b0b0b;
+  color: #fff;
+  font-family: "Space Grotesk", sans-serif;
+  overflow-x: hidden;
 }
 
-.box {
-  height: 400px;
-  width: 400px;
-  background-color: lightgreen;
-  border: 2px solid white;
-  border-radius: 50%;
+.marquee-section {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 25px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #191919 0%,
+      #0b0b0b 60%
+    );
+}
+
+.marquee {
+  width: 110%;
+  margin-left: -5%;
+
+  overflow: hidden;
+
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+
+  padding: 18px 0;
+
+  transform-origin: center;
+}
+
+.marquee-top {
+  background: #d7ff00;
+  color: #0b0b0b;
+  transform: rotate(-2deg);
+}
+
+.marquee-bottom {
+  background: #171717;
+  color: #fff;
+  transform: rotate(2deg);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+}
+
+.marquee-text {
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  font-size: clamp(45px, 7vw, 100px);
+  font-weight: 700;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+.marquee-text span {
+  display: inline-block;
+
+  margin: 0 35px;
+
+  font-size: 0.45em;
+}
+
+.marquee-bottom .marquee-text span {
+  color: #d7ff00;
 }

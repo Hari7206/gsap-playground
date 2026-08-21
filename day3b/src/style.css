@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 10;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: black;
+}
+
+.box , .box1 , .box2  , .box3{
+  height: 300px;
+  width: 300px;
+  margin-bottom: 1rem;
+}
+
+.box {
+  background-color: red;
+}
+.box1 {
+  background-color: rgb(0, 255, 157);
+}
+.box2 {
+  background-color: rgb(25, 0, 255);
+}
+.box3 {
+  background-color: rgb(204, 0, 255);
+}

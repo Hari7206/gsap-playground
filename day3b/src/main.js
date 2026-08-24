@@ -43,46 +43,63 @@ import "./style.css";
 
 
 
-const loaderCount = document.querySelector('.loader-count h1')
-let count = 0
-const intverval = setInterval(() => {
-  count++;
-  loaderCount.innerHTML = `${count}%`
+// const loaderCount = document.querySelector('.loader-count h1')
+// let count = 0
+// const intverval = setInterval(() => {
+//   count++;
+//   loaderCount.innerHTML = `${count}%`
 
-  if (count === 100) {
+//   if (count === 100) {
 
-    clearInterval(intverval)
-    landingAnimtion()
-  }
-}, 20);
+//     clearInterval(intverval)
+//     landingAnimtion()
+//   }
+// }, 20);
 
 
-function landingAnimtion() {
-  const tl = gsap.timeline()
+// function landingAnimtion() {
+//   const tl = gsap.timeline()
 
-  tl.to('.loader-count' , {
-    opacity: 0,
-    duration: 1.6,
-    ease: 'power3.out'
-  }).to('.loader' , {
-    yPercent: -100,
-    duration: 1.2,
-    ease: 'expo.out'
-  },
-    "-=1.1"
-).from('.background img' , {
-    scale:1.2,
-    duration: 1.3 ,
-    ease: 'expo.out'
-  },
-  "-=0.98"
-).from('.heading h1' , {
-    yPercent: 100,
-    duration: 1.2,
-    ease: 'expo.out'
-  } , "-=0.6").from('.subheading h2 ' , {
-    yPercent: 100,
-    duration: 1.2,
-    ease: 'expo.out'
-  },  "-=0.7")
-}
+//   tl.to('.loader-count' , {
+//     opacity: 0,
+//     duration: 1.6,
+//     ease: 'power3.out'
+//   }).to('.loader' , {
+//     yPercent: -100,
+//     duration: 1.2,
+//     ease: 'expo.out'
+//   },
+//     "-=1.1"
+// ).from('.background img' , {
+//     scale:1.2,
+//     duration: 1.3 ,
+//     ease: 'expo.out'
+//   },
+//   "-=0.98"
+// ).from('.heading h1' , {
+//     yPercent: 100,
+//     duration: 1.2,
+//     ease: 'expo.out'
+//   } , "-=0.6").from('.subheading h2 ' , {
+//     yPercent: 100,
+//     duration: 1.2,
+//     ease: 'expo.out'
+//   },  "-=0.7")
+// }
+
+
+
+const tl = gsap.timeline()
+
+tl.from('.big-img img', {
+  xPercent: -100,
+  duration: 1.2,
+  ease: "power3.out"
+})
+
+// Small image comes from left (fully hidden) to visible
+.from('.small-img img', {
+  xPercent: 100,
+  duration: 1.2,
+  ease: "power3.out"
+}, '-=0.8')

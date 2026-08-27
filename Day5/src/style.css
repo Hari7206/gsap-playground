@@ -21,10 +21,10 @@ body {
   justify-content: center;
 }
 
-.titleWord {
+/* .titleWord {
   overflow: hidden;
-}
-
+} */
+/* 
 #app .title h1 {
   font-size: 10rem;
   font-family: "Poppins", sans-serif;
@@ -42,4 +42,30 @@ p{
   height: 300px;
   width: 300px;
   background-color: red;
+} */
+
+.imgGallery {
+height: 30%;
+width: 30%;
+display: flex;
+flex-direction: column;
+gap: 2rem;
+}
+
+.imgGallery img {
+  height: 40%;
+  width: 40%;
+  object-fit: cover;
+}
+
+.imgShow{
+  height: 70%;
+  width: 60%;
+  background-color: red;
+}
+
+.imgShow img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }

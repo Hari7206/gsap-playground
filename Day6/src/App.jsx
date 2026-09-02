@@ -6,15 +6,15 @@ import "./App.css";
 import AnimateOnX from "./components/AnimateOnX";
 
 function App() {
-  const boxRef = useRef(null);
+  const boxRef = useRef([]);
   const containerRef = useRef(null);
 
   const { contextSafe } = useGSAP(
     () => {
       gsap.to(boxRef.current, {
         x: 700,
-        rotation: 360,
         duration: 2,
+        stagger: 0.2,
         ease: "power2.inOut",
       });
     },
@@ -28,7 +28,9 @@ function App() {
   return (
     <div ref={containerRef}>
  
-      <div className="box box1" ref={boxRef}></div>
+      <div className="box box1" ref={(el) =>  boxRef.current.push(el)}></div>
+      <div className="box box1" ref={(el) =>  boxRef.current.push(el)}></div>
+      <div className="box box1" ref={(el) =>  boxRef.current.push(el)}></div>
 
       <button
         onClick={contextSafe(() => {
